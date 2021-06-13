@@ -1,0 +1,5 @@
+.vscode/settings.json
+bin/main
+bin/test.csv
+bin/test.mat
+bin/test.range
