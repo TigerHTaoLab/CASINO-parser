@@ -16,18 +16,12 @@ std::vector<std::string> &split(const std::string &s, char delim, std::vector<st
     }
     return elems;
 }
-std::vector<std::string> GetProgramOptionAsString(
-    int argc,
-    char **argv,
-    const std::string &option,
-    char delim,
-    const std::string &default_value = "")
+std::vector<std::string> GetProgramOptionAsString(int argc, char **argv, const std::string &option, char delim, const std::string &default_value = "")
 {
     char **itr = std::find(argv, argv + argc, option);
     std::vector<std::string> optStrVec;
     if (itr != argv + argc && ++itr != argv + argc)
     {
-
         split(std::string(*itr), delim, optStrVec);
     }
 
@@ -61,6 +55,7 @@ int main(int argc, char *argv[])
     if (ProgramOptionExists(argc, argv, "-d2m"))
     {
         std::cout << "Reading from " << datFile << "...\n";
+        std::cout << "Done!\n";
         std::cout << "Writing to " << matFile_w << "...\n";
         casino_parser::IO::openDAT(datFile, matFile_w, rangeFile_w);
         std::cout << "Done!\n";

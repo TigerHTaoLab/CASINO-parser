@@ -22,12 +22,11 @@ aux_source_directory(
 )
 
 
-add_executable(main 
-    ./examples/main.cpp 
+add_executable(casino_parser 
+    ./examples/casino_parser.cpp 
     ${SRC}    
 )
-target_link_libraries(main
+target_link_libraries(casino_parser
 PUBLIC
 OpenMP::OpenMP_CXX
-
 )
