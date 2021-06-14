@@ -55,7 +55,6 @@ int main(int argc, char *argv[])
     if (ProgramOptionExists(argc, argv, "-d2m"))
     {
         std::cout << "Reading from " << datFile << "...\n";
-        std::cout << "Done!\n";
         std::cout << "Writing to " << matFile_w << "...\n";
         casino_parser::IO::openDAT(datFile, matFile_w, rangeFile_w);
         std::cout << "Done!\n";

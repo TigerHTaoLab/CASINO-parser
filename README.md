@@ -40,3 +40,9 @@ Rows = [max(abs(x)); max(abs(y)); max(abs(z)); ]
 A histogram in which the statistics of all electron trajectories are partitioned w.r.t the z coordinate.
 
 Columns = [beginning coordinate of a z-bin | hits of dissipating events | energy | dissipation]
+
+## Result
+
+Down below shows the result of CASINO simulations with a beam energy of 5eV. 200000 and 1000000 electron trajectories were generated in two independent simulations. The statistics of 1000k electrons was multiplied by a factor of 0.2 in order to compare with the result of 200k electrons. Our histogram code is consistent in the sense that it converges to a steady distribution as the total number of samples increases.
+
+![](./python/result.png)
